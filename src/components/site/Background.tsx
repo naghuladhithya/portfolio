@@ -6,7 +6,7 @@ export function Background() {
 
       {/* moving grid */}
       <div
-        className="absolute inset-0 opacity-[0.35]"
+        className="absolute inset-0 opacity-[0.4]"
         style={{
           backgroundImage:
             "linear-gradient(to right, oklch(1 0 0 / 4%) 1px, transparent 1px), linear-gradient(to bottom, oklch(1 0 0 / 4%) 1px, transparent 1px)",
@@ -18,15 +18,15 @@ export function Background() {
 
       {/* radial glows */}
       <div
-        className="absolute -top-40 left-1/2 h-[46rem] w-[46rem] -translate-x-1/2 rounded-full blur-3xl opacity-30"
+        className="absolute -top-40 left-1/2 h-[46rem] w-[46rem] -translate-x-1/2 rounded-full blur-3xl opacity-40"
         style={{ background: "radial-gradient(circle, var(--blue), transparent 62%)", animation: "float-slow 16s ease-in-out infinite" }}
       />
       <div
-        className="absolute top-1/3 -right-40 h-[34rem] w-[34rem] rounded-full blur-3xl opacity-20"
+        className="absolute top-1/3 -right-40 h-[34rem] w-[34rem] rounded-full blur-3xl opacity-25"
         style={{ background: "radial-gradient(circle, var(--violet), transparent 62%)", animation: "float-slow 20s ease-in-out infinite reverse" }}
       />
       <div
-        className="absolute bottom-0 -left-40 h-[34rem] w-[34rem] rounded-full blur-3xl opacity-[0.15]"
+        className="absolute bottom-0 -left-40 h-[34rem] w-[34rem] rounded-full blur-3xl opacity-20"
         style={{ background: "radial-gradient(circle, var(--cyan), transparent 62%)", animation: "float-slow 24s ease-in-out infinite" }}
       />
 
