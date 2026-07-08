@@ -10,8 +10,8 @@ export function Education() {
         <div className="card-ring card-ring-hover card-hi group overflow-hidden p-8 md:p-10">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="flex items-start gap-5">
-              <div className="grid h-14 w-14 shrink-0 place-items-center overflow-hidden rounded-2xl bg-gradient-to-br from-primary/25 to-violet/20 ring-1 ring-border">
-  <img src="/uiuc.png" alt="UIUC" className="h-8 w-8 object-contain" />
+              <div className="h-14 w-14 shrink-0 overflow-hidden rounded-2xl ring-1 ring-border">
+  <img src="/uiuc.png" alt="UIUC" className="h-full w-full object-cover" />
 </div>
               <div className="min-w-0">
                 <h3 className="text-xl font-semibold tracking-tight md:text-2xl">{education.school}</h3>
