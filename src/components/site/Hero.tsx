@@ -11,7 +11,7 @@ export function Hero() {
     { label: "Resume", href: profile.links.resume, icon: FileText },
     { label: "GitHub", href: profile.links.github, icon: Github },
     { label: "LinkedIn", href: profile.links.linkedin, icon: Linkedin },
-    { label: "Email", href: `mailto:${profile.email}`, icon: Mail },
+    { label: "nav5@illinois.edu", href: `mailto:${profile.email}`, icon: Mail },
   ];
  
   return (
