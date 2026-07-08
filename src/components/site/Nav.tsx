@@ -43,7 +43,7 @@ export function Nav() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -80, opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed inset-x-0 top-4 z-50 flex justify-center px-4"
+          className="fixed inset-x-0 top-4 z-50 hidden justify-center px-4 md:flex"
         >
           <nav
             className={`glass flex items-center gap-1 rounded-full py-2 pl-4 pr-2 transition-shadow duration-500 ${
