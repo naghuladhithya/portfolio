@@ -4,7 +4,9 @@ import { profile, interests } from "@/lib/portfolio-data";
 import { MagneticButton } from "./MagneticButton";
 import { Stagger, StaggerItem } from "./Reveal";
 
-const ease = [0.16, 1, 0.3, 1] as const;
+import { ease as easing, duration } from "@/lib/motion";
+import { TiltCard } from "./TiltCard";
+const ease = easing.hero;
 
 export function Hero() {
   const buttons = [
@@ -19,7 +21,7 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease }}
+        transition={{ duration: duration.hero * 0.7, ease }}
         className="mb-8 inline-flex w-fit items-center gap-2 rounded-full border border-border glass px-4 py-1.5"
       >
         <span className="relative flex h-2 w-2">
@@ -32,7 +34,7 @@ export function Hero() {
       <motion.h1
         initial={{ opacity: 0, y: 24, filter: "blur(10px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        transition={{ duration: 0.9, ease, delay: 0.05 }}
+        transition={{ duration: duration.hero, ease, delay: 0.05 }}
         className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-tight text-gradient sm:text-6xl md:text-7xl"
       >
         {profile.name}
@@ -41,7 +43,7 @@ export function Hero() {
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease, delay: 0.15 }}
+        transition={{ duration: duration.hero * 0.85, ease, delay: 0.15 }}
         className="mt-6 font-serif text-2xl text-muted-foreground md:text-3xl"
       >
         CS &amp; Data Science <span className="text-foreground/80">@ UIUC</span>
@@ -50,7 +52,7 @@ export function Hero() {
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease, delay: 0.25 }}
+        transition={{ duration: duration.hero * 0.85, ease, delay: 0.25 }}
         className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground"
       >
         {profile.description}
@@ -59,7 +61,7 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease, delay: 0.35 }}
+        transition={{ duration: duration.hero * 0.85, ease, delay: 0.35 }}
         className="mt-10 flex flex-wrap gap-3"
       >
         {buttons.map((b, i) => (
@@ -68,7 +70,7 @@ export function Hero() {
             href={b.href}
             className={`group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${
               i === 0
-                ? "bg-foreground text-background hover:bg-foreground/90"
+                ? "shimmer bg-foreground text-background hover:bg-foreground/90"
                 : "glass text-foreground hover:border-primary/40"
             }`}
           >
@@ -85,10 +87,10 @@ export function Hero() {
         <Stagger className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {interests.map((it) => (
             <StaggerItem key={it}>
-              <div className="card-ring card-ring-hover group h-full p-5">
-                <div className="mb-8 h-8 w-8 rounded-lg bg-gradient-to-br from-primary/30 to-violet/20 ring-1 ring-border transition-transform duration-500 group-hover:scale-110" />
+              <TiltCard className="card-ring card-ring-hover card-hi h-full p-5">
+                <div className="mb-8 h-8 w-8 rounded-lg bg-gradient-to-br from-primary/40 to-violet/25 ring-1 ring-border transition-transform duration-500 group-hover:scale-110" />
                 <p className="text-sm font-medium leading-snug">{it}</p>
-              </div>
+              </TiltCard>
             </StaggerItem>
           ))}
         </Stagger>
