@@ -50,9 +50,13 @@ export function Nav() {
               scrolled ? "shadow-[0_10px_40px_-15px_rgba(0,0,0,0.6)]" : ""
             }`}
           >
-            <a href="#home" className="mr-2 hidden text-sm font-semibold tracking-tight sm:block">
-              NAV<span className="accent-gradient">.</span>
-            </a>
+           <a href="#home" className="mr-2 hidden sm:block">
+  <img
+    src="/profile.jpg"
+    alt="Naghul Adhithya"
+    className="h-9 w-9 rounded-full object-cover ring-1 ring-border"
+  />
+</a>
             <ul className="flex items-center gap-0.5">
               {sections.map((s) => (
                 <li key={s.id} className="relative">
