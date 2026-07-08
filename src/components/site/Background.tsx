@@ -19,7 +19,7 @@ export function Background() {
       {/* radial glows */}
       <div
         className="absolute -top-40 left-1/2 h-[46rem] w-[46rem] -translate-x-1/2 rounded-full blur-3xl opacity-40"
-        style={{ background: "radial-gradient(circle, var(--blue), transparent 62%)", animation: "float-slow 16s ease-in-out infinite" }}
+        style={{ background: "radial-gradient(circle, var(--blue), transparent 62%)", animation: "light-drift 18s ease-in-out infinite" }}
       />
       <div
         className="absolute top-1/3 -right-40 h-[34rem] w-[34rem] rounded-full blur-3xl opacity-25"
