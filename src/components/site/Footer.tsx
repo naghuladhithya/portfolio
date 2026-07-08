@@ -7,9 +7,7 @@ export function Footer() {
         <p className="text-sm text-muted-foreground">
           {profile.name} <span className="text-foreground/40">© 2026</span>
         </p>
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          Designed &amp; Built with intent
-        </p>
+       
       </div>
     </footer>
   );
