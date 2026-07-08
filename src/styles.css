@@ -37,6 +37,8 @@
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
+
+
 :root {
   --radius: 0.9rem;
 
@@ -73,10 +75,12 @@
     border-color: var(--color-border);
   }
 
-  html {
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
 
   body {
     background-color: var(--color-background);
