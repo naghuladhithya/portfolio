@@ -1,4 +1,4 @@
-
+import { MapPin } from "lucide-react";
 import { education } from "@/lib/portfolio-data";
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
