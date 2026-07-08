@@ -68,7 +68,7 @@ export function Nav() {
                     <motion.span
                       layoutId="nav-pill"
                       className="absolute inset-0 rounded-full bg-accent"
-                      transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                      transition={{ type: "spring", stiffness: 320, damping: 30, mass: 0.8 }}
                     />
                   )}
                 </li>

@@ -17,7 +17,7 @@ export function Experience() {
               initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.75, ease, delay: i * 0.05 }}
+              transition={{ duration: 0.95, ease, delay: i * 0.08 }}
               className="relative pl-10 md:pl-14"
             >
               <span className="absolute left-0 top-2 grid h-4 w-4 place-items-center rounded-full bg-background ring-1 ring-primary/50 md:h-6 md:w-6">
