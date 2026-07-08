@@ -26,20 +26,20 @@ export function Contact() {
           <div className="card-ring divide-y divide-border overflow-hidden">
             {rows.map((r) => (
               <a
-                key={r.label}
-                href={r.href}
-                target={r.href.startsWith("http") ? "_blank" : undefined}
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-4 px-6 py-5 transition-colors hover:bg-accent/40"
-              >
-                <span className="inline-flex items-center gap-3 text-sm font-medium">
-                  <r.icon className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-primary" strokeWidth={1.75} />
-                  {r.label}
-                </span>
-                <span className="truncate font-mono text-sm text-muted-foreground transition-colors group-hover:text-foreground">
-                  {r.value}
-                </span>
-              </a>
+    key={r.label}
+  href={r.href}
+  target={r.href.startsWith("http") ? "_blank" : undefined}
+  rel="noopener noreferrer"
+  className="group flex flex-col gap-1 px-6 py-5 transition-colors hover:bg-accent/40 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+>
+  <span className="inline-flex shrink-0 items-center gap-3 text-sm font-medium">
+    <r.icon className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-primary" strokeWidth={1.75} />
+    {r.label}
+  </span>
+  <span className="min-w-0 truncate font-mono text-sm text-muted-foreground transition-colors group-hover:text-foreground">
+    {r.value}
+  </span>
+</a>
             ))}
           </div>
         </Reveal>
