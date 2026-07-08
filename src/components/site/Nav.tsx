@@ -52,7 +52,7 @@ export function Nav() {
           >
            <a href="#home" className="mr-2 hidden sm:block">
   <img
-    src="/profile.jpg"
+    src="/naghul_pfp.jpg"
     alt="Naghul Adhithya"
     className="h-9 w-9 rounded-full object-cover ring-1 ring-border"
   />
