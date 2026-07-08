@@ -1,13 +1,11 @@
 import { motion } from "framer-motion";
 import { FileText, Github, Linkedin, Mail } from "lucide-react";
-import { profile, interests } from "@/lib/portfolio-data";
+import { profile } from "@/lib/portfolio-data";
 import { MagneticButton } from "./MagneticButton";
-import { Stagger, StaggerItem } from "./Reveal";
-
+ 
 import { ease as easing, duration } from "@/lib/motion";
-import { TiltCard } from "./TiltCard";
 const ease = easing.hero;
-
+ 
 export function Hero() {
   const buttons = [
     { label: "Resume", href: profile.links.resume, icon: FileText },
@@ -15,7 +13,7 @@ export function Hero() {
     { label: "LinkedIn", href: profile.links.linkedin, icon: Linkedin },
     { label: "Email", href: `mailto:${profile.email}`, icon: Mail },
   ];
-
+ 
   return (
     <section id="home" className="relative mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center px-6 pt-28 pb-20">
       <motion.div
@@ -30,7 +28,7 @@ export function Hero() {
         </span>
         <span className="text-xs font-medium text-muted-foreground">{profile.status}</span>
       </motion.div>
-
+ 
       <motion.h1
         initial={{ opacity: 0, y: 24, filter: "blur(10px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -39,7 +37,7 @@ export function Hero() {
       >
         {profile.name}
       </motion.h1>
-
+ 
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -48,7 +46,7 @@ export function Hero() {
       >
         CS &amp; Data Science <span className="text-foreground/80">@ UIUC</span>
       </motion.p>
-
+ 
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -57,7 +55,7 @@ export function Hero() {
       >
         {profile.description}
       </motion.p>
-
+ 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -79,22 +77,6 @@ export function Hero() {
           </MagneticButton>
         ))}
       </motion.div>
-
-      <div className="mt-24">
-        <span className="font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground">
-          Currently Exploring
-        </span>
-        <Stagger className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {interests.map((it) => (
-            <StaggerItem key={it}>
-              <TiltCard className="card-ring card-ring-hover card-hi h-full p-5">
-                <div className="mb-8 h-8 w-8 rounded-lg bg-gradient-to-br from-primary/40 to-violet/25 ring-1 ring-border transition-transform duration-500 group-hover:scale-110" />
-                <p className="text-sm font-medium leading-snug">{it}</p>
-              </TiltCard>
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </div>
     </section>
   );
 }
